@@ -27,7 +27,10 @@ ul {
 li {
   list-style: none;
   font-size: 18px;
+  cursor: pointer;
 }
+
+
 
 .logo  {
   font-weight: bold;

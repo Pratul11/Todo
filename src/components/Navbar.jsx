@@ -1,6 +1,8 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
+
   return (
     <>
     <nav>
@@ -8,9 +10,9 @@ const Navbar = () => {
                 <p>iTask</p>
             </div>
         <ul>
-            <li>HOME</li>
-            <li>ABOUT</li>
-            <li>CONTACT US</li>
+            <NavLink to="/"><li>HOME</li></NavLink>
+            <NavLink to="/about"><li>ABOUT</li></NavLink>
+            <NavLink to="/contact"><li>CONTACT US</li></NavLink>
         </ul>
       
     </nav>

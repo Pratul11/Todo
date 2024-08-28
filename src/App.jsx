@@ -1,15 +1,30 @@
-import { useState } from 'react'
-import './App.css'
+import {createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Todo from './components/Todo'
+import Home from './components/Home'
+import About from './components/About'
+import Contact from './components/Contact'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <><Navbar /><Todo/></>
+    },
+    {
+      path: "/about",
+      element: <><Navbar /><About/></>
+    },
+    {
+      path: "/contact/:username",
+      element: <><Navbar /><Contact/></>,
+      errorElement: <Home/>
+    },
+  ])
   return (
     <>
-      <Navbar />
-      <Todo />
+      
+      <RouterProvider router = {router} />
     </>
   )
 }
