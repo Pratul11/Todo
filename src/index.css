@@ -2,7 +2,13 @@
   margin: 0;
   padding: 0;
 }
-
+body {
+  /* background: url(./assets/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+} */
+  background-color: rgb(241, 235, 227)
+}
 nav, ul{
   display: flex;
 }
@@ -36,6 +42,7 @@ li {
   width: 700px;
   border-radius: 25px;
   background-color: #EDE9FE;
+  border: 2px solid #5A22B7;
 }
 
 .todo-head {
@@ -58,6 +65,14 @@ li {
 }
 
 #task-input {
+  width: 80%;
+  padding: 5px;
+  height: 25px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+#task-edit {
   width: 80%;
   padding: 5px;
   height: 25px;
@@ -133,6 +148,10 @@ li {
   font-size: 15px;
 }
 
-.completed {
+.completed p {
   text-decoration: line-through;
+}
+
+button {
+  cursor: pointer;
 }
